@@ -1,10 +1,9 @@
-﻿using System;
-internal class Program
+﻿internal class Program
 {
     private static void Main(string[] args)
     {
         int opc = 0;
-        while(opc != 4)
+        while (opc != 4)
         {
             Console.Clear();
             Console.WriteLine("MENU SERIE FIBONACCI");
@@ -13,28 +12,28 @@ internal class Program
             Console.WriteLine("3. Muestra los primeros m numeros de la serie.");
             Console.WriteLine("4. Salir.");
             opc = Int32.Parse(Console.ReadLine());
-        switch (opc)
-        {
-            case 1:
-                punto1();
-                Console.ReadKey();
-                break;
-            case 2:
-                punto2();
-                Console.ReadKey();
-                break;
-            case 3:
-                punto3();
-                Console.ReadKey();
-                break;
-            case 4:
-                Console.WriteLine("Hasta Luego");
-                break;
-            default:
-                Console.WriteLine("Invalido");
-                break;
-        }}
-        
+            switch (opc)
+            {
+                case 1:
+                    punto1();
+                    Console.ReadKey();
+                    break;
+                case 2:
+                    punto2();
+                    Console.ReadKey();
+                    break;
+                case 3:
+                    punto3();
+                    Console.ReadKey();
+                    break;
+                case 4:
+                    Console.WriteLine("Hasta Luego");
+                    break;
+                default:
+                    Console.WriteLine("Invalido");
+                    break;
+            }
+        }
     }
 
     public static void punto1()
@@ -52,6 +51,7 @@ internal class Program
         }
         Console.WriteLine($"F{n} = {fk}");
     }
+
     public static void punto2()
     {
         Console.Write("Ingrese el numero: ");
@@ -59,7 +59,7 @@ internal class Program
         int f0 = 0;
         int f1 = 1;
         int fk = 0;
-        for (int i = 1; i <= n; i++)
+        for (int i = 1; fk <= n; i++)
         {
             fk = f1 + f0;
             f1 = f0;
@@ -72,6 +72,7 @@ internal class Program
         }
         Console.WriteLine($"{n} no es numero de Fibonacci");
     }
+
     public static void punto3()
     {
         Console.Write("Ingrese m: ");
@@ -79,6 +80,7 @@ internal class Program
         int f0 = 0;
         int f1 = 1;
         int fk = 0;
+        Console.WriteLine($"Los {m} primeros numeros de Fibonacci son: ");
         for (int i = 1; i <= m; i++)
         {
             Console.Write($"{fk} ");
